@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from ledthanhdat.vn/html/teamo/productdetails-fullwidth.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 08 Jul 2023 07:27:08 GMT -->
+<head>
+    <title>Plant species Detection</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.png"/>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/css/animate.min.css">
+    <link rel="stylesheet" href="assets/css/jquery-ui.css">
+    <link rel="stylesheet" href="assets/css/slick.css">
+    <link rel="stylesheet" href="assets/css/chosen.min.css">
+    <link rel="stylesheet" href="assets/css/pe-icon-7-stroke.css">
+    <link rel="stylesheet" href="assets/css/magnific-popup.min.css">
+    <link rel="stylesheet" href="assets/css/lightbox.min.css">
+    <link rel="stylesheet" href="assets/js/fancybox/source/jquery.fancybox.css">
+    <link rel="stylesheet" href="assets/css/jquery.scrollbar.min.css">
+    <link rel="stylesheet" href="assets/css/mobile-menu.css">
+    <link rel="stylesheet" href="assets/fonts/flaticon/flaticon.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="details-page">
+   {%  include 'header.html' %}
+<div class="main-content main-content-details single no-sidebar">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="breadcrumb-trail breadcrumbs">
+                    <ul class="trail-items breadcrumb">
+                        <li class="trail-item trail-begin">
+                            <a href="/">Home</a>
+                        </li>
+                        <li class="trail-item trail-end active">
+                            {{ predicted_class }}
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="content-area content-details full-width col-lg-9 col-md-8 col-sm-12 col-xs-12">
+                <div class="site-main">
+                    <div class="details-product">
+                        <div class="details-thumd">
+                            <div class="image-preview-container image-thick-box image_preview_container">
+                                <img id="img_zoom" data-zoom-image="assets/{{ image }}"
+                                src="assets/{{ image }}" alt="img">
+                                <a href="#" class="btn-zoom open_qv"><i class="fa fa-street-view" aria-hidden="true"></i></a>
+                            </div>
+                           
+                        </div>
+                      <div class="details-infor">
+                            <h1 class="product-title">
+                                {{ predicted_class }}
+                            </h1>
+                          
+                           
+                          
+                        
+                        </div> 
+                    </div>
+                    <div class="tab-details-product">
+                        <ul class="tab-link">
+                            <li class="active">
+                                <a data-toggle="tab" aria-expanded="true" href="#product-descriptions">Descriptions </a>
+                            </li>
+                           
+                        </ul>
+                        <div class="tab-container">
+                            <div id="product-descriptions" class="tab-panel active">
+                                {% if predicted_class== 'Aloevera' %}    <p>
+                                    Aloevera: Clinical research suggests topical application of aloe gel may speed burn healing. There also is evidence that treatment with aloe vera may reduce pain from burns. Research suggests topical use of aloe also may help people with herpes simplex, lichen planus, or psoriasis.
+                                </p>
+                                {% elif predicted_class== 'alocasia sande' %}
+                               
+                                <p>
+                                    alocasia sande: Generally, the banana plant provides consumable parts and significantly contributes to medicinal uses, manufacturing textiles, culinary purposes, skin treatments, natural leaf platters, religious importance, etc.
+                                </p>
+                                {% elif predicted_class== 'Banana' %}
+
+                                <p>
+                                    Banana: Generally, the banana plant provides consumable parts and significantly contributes to medicinal uses, manufacturing textiles, culinary purposes, skin treatments, natural leaf platters, religious importance, etc.
+                                </p>
+
+                                {% elif predicted_class== 'bilimbi' %}
+                               
+                                <p>
+                                    Bilimbi: Bilimbi possesses antidiabetic, antihypertensive, antithrombotic, hypolipidemic, hepatoprotective, anticancer, and wound healing effects due to its strong antioxidative, anti-inflammatory, and antimicrobial properties.
+                                </p>
+                                
+                                {% elif predicted_class== 'cantaloupe' %}
+                               
+                                <p>
+                                    Cantaloupe: The cantaloupe, rockmelon, sweet melon, or spanspek are a type of fruit. They are classified as a melon that is a variety of the muskmelon species from the family Cucurbitaceae.
+                                </p>
+                                {% elif predicted_class== 'cassava' %}
+                               
+                                <p>
+                                    Cassava: Manihot esculenta, commonly called cassava, manioc, or yuca, is a woody shrub of the spurge family, Euphorbiaceae, native to South America, from Brazil and parts of the Andes.
+                                </p>
+                                {% elif predicted_class== 'coconut' %}
+                               
+                                <p>
+                                    Coconut: Coconut is low in carbs, so it is the best substitute for carb-rich snacks. It contains minerals and nutrients such as potassium, sodium, manganese, vitamin B, copper, and iron. Manganese is beneficial for our bone health.
+                                </p>
+                                {% elif predicted_class== 'corn' %}
+                               
+                                <p>
+                                    corn: Corn is a great source of potassium, an essential nutrient that many Americans don't get enough of. Potassium helps regulate the circulatory system, maintaining adequate blood flow and a strong heartbeat. Low potassium levels may lead to a potentially serious condition called hypokalemia.
+                                </p>
+                                {% elif predicted_class== 'cucumber' %}
+                               
+                                <p>
+                                    cucumber: Cucumber is a nutritious fruit with a high water content. Eating cucumber may help lower blood sugar, prevent constipation, and support weight loss. To maximize cucumber's health benefits, eat the peel, too. Though commonly thought to be a vegetable, cucumber is actually a fruit.
+                                </p>
+                                {% elif predicted_class== 'curcuma' %}
+                               
+                                <p>
+                                    curcuma: Curcumin, historically known as curcuma, is a lemon yellow pigment most commonly used in a water-soluble form. It is obtained by solvent extraction of turmeric, which is the cleaned, dried and ground rhizome of natural strains of Curcuma longa L. The initial extract is oily and contains about 40% curcumin. 
+                                </p>
+                                {% elif predicted_class== 'eggplant' %}
+                               
+                                <p>
+                                    eggplant: Brinjal and eggplant are two different terms we use interchangeably to refer to the same food. Eggplant is an egg-shaped fruit. It is quite fleshy and frequently cooked as a vegetable. Brinjal is a less common name used for eggplants; South Asians such as Indians and Sri Lankans mainly use this name.
+                                </p>
+                                {% elif predicted_class== 'galangal' %}
+                               
+                                <p>
+                                    galangal: In India the oil of galangal is valued in perfumery. Galangal can be planted on ridges, usually about 30 cm apart and with 15-23 cm between plants. The crop is planted by setts (small rhizomes) with one or two buds. Plant in spring, after all danger of frost is past and the soil has warmed up at a depth of 5-10 cm. 
+                                </p>
+                                {% elif predicted_class== 'ginger' %}
+                               
+                                <p>
+                                    ginger: Ginger may have numerous health benefits due to its anti-inflammatory, anti-nausea, and other properties. It may help you lose weight, manage arthritis, reduce menstrual symptoms, and more. Ginger comes from a flowering plant originating in Southeast Asia.
+                                </p>
+                                {% elif predicted_class== 'guava' %}
+                               
+                                <p>
+                                    guava: Guavas enhance immunity due to their high vitamin C content, aid in diabetes management, promote heart health, assist in weight loss, improve digestion, boost brain function, enhance skin health, relieve stress, and benefit pregnant women. They also alleviate menstrual pain, reduce cancer risk, and support eye health.
+                                </p>
+                                {% elif predicted_class== 'kale' %}
+                               
+                                <p>
+                                    kale: Kale is a green, leafy, cruciferous vegetable that is rich in nutrients. Kale can be good for adding fiber and antioxidants to the diet in many savory dishes, salads, and smoothies.
+                                </p>
+                                {% elif predicted_class== 'longbeans' %}
+                               
+                                <p>
+                                    longbeans: It is also known as asparagus bean, Chinese long bean, long-podded cowpea, and yardlong bean. Long bean is called as bora, bodi, pea bean, and snake bean. This vigorous annual crop is a member of the genus Vigna, which is different from the common bean, which belongs to the genus Phaseolus.
+                                </p>
+                                {% elif predicted_class== 'mango' %}
+                               
+                                <p>
+                                    mango: A mango is an edible stone fruit produced by the tropical tree Mangifera indica. It is believed to have originated in southern Asia, particularly in eastern India, Bangladesh, and the Andaman Islands.It has been cultivated in South and Southeast Asia since ancient times resulting in two types of modern mango cultivars: the "Indian type" and the "Southeast Asian type".
+                                </p>
+                                {% elif predicted_class== 'melon' %}
+                               
+                                <p>
+                                    melon: A melon is any of various plants of the family Cucurbitaceae with sweet, edible, and fleshy fruit. The word "melon" can refer to either the plant or specifically to the fruit. Botanically, a melon is a kind of berry, specifically a "pepo".
+                                </p>
+                                {% elif predicted_class== 'orange' %}
+                               
+                                <p>
+                                    orange: An orange is a fruit of various citrus species in the family Rutaceae (see list of plants known as orange); it primarily refers to Citrus × sinensis,which is also called sweet orange, to distinguish it from the related Citrus × aurantium, referred to as bitter orange. The sweet orange reproduces asexually (apomixis through nucellar embryony); varieties of the sweet orange arise through mutations.
+                                </p>
+                                {% elif predicted_class== 'paddy' %}
+                               
+                                <p>
+                                    paddy: Oryza sativa, commonly known as rice, is the plant species most commonly referred to in English as rice. It is the type of farmed rice whose cultivars are most common globally, and was first domesticated in the Yangtze River basin in China 13,500 to 8,200 years ago.
+                                </p>
+                                {% elif predicted_class== 'papaya' %}
+                               
+                                <p>
+                                    papaya: The papaya, papaw, or pawpaw is the plant species Carica papaya, one of the 21 accepted species in the genus Carica of the family Caricaceae. It was first domesticated in Mesoamerica, within modern-day southern Mexico and Central America. It is grown in several countries in regions with a tropical climate.
+                                </p>
+                                {% elif predicted_class== 'peper chili' %}
+                               
+                                <p>
+                                    peper chili: Chili peppers, from Nahuatl chīlli, are varieties of the berry-fruit of plants from the genus Capsicum, which are members of the nightshade family Solanaceae, cultivated for their pungency. Chili peppers are widely used in many cuisines as a spice to add "heat" to dishes.
+                                </p>
+                                {% elif predicted_class== 'pineapple' %}
+                               
+                                <p>
+                                    pineapple: The pineapple is a tropical plant with an edible fruit; it is the most economically significant plant in the family Bromeliaceae. The pineapple is indigenous to South America, where it has been cultivated for many centuries.
+                                </p>
+                                {% elif predicted_class== 'pomelo' %}
+                               
+                                <p>
+                                    pomelo: The pomelo, from the family Rutaceae, is the largest citrus fruit, and the principal ancestor of the grapefruit. It is a natural, non-hybrid, citrus fruit, native to Southeast Asia. Similar in taste to a sweet grapefruit, the pomelo is commonly consumed and used for festive occasions throughout Southeast Asia. 
+                                </p>
+                                {% elif predicted_class== 'shallot' %}
+                               
+                                <p>
+                                    shallot: The shallot is a botanical variety of the onion. Until 2010, the shallot was classified as a separate species, Allium ascalonicum. The taxon was synonymized with Allium cepa in 2010, as the difference was too small to justify a separate species.  
+                                </p>
+                                {% elif predicted_class== 'soybeans' %}
+                               
+                                <p>
+                                    soybeans: The soybean, soy bean, or soya bean is a species of legume native to East Asia, widely grown for its edible bean, which has numerous uses. Traditional unfermented food uses of soybeans include soy milk, from which tofu and tofu skin are made. 
+                                </p>
+                                {% elif predicted_class== 'spinach' %}
+                               
+                                <p>
+                                    spinach: Spinach is a leafy green flowering plant native to central and Western Asia. It is of the order Caryophyllales, family Amaranthaceae, subfamily Chenopodioideae. Its leaves are a common edible vegetable consumed either fresh, or after storage using preservation techniques by canning, freezing, or dehydration. 
+                                </p>
+                                {% elif predicted_class== 'sweet potatoes' %}
+                               
+                                <p>
+                                    sweet potatoes: The sweet potato or sweetpotato is a dicotyledonous plant that belongs to the bindweed or morning glory family, Convolvulaceae. Its large, starchy, sweet-tasting tuberous roots are used as a root vegetable. The young shoots and leaves are sometimes eaten as greens. 
+                                </p>
+                                {% elif predicted_class== 'tobacco' %}
+                               
+                                <p>
+                                    tobacco: Tobacco is the common name of several plants in the genus Nicotiana of the family Solanaceae, and the general term for any product prepared from the cured leaves of these plants. More than 70 species of tobacco are known, but the chief commercial crop is N. tabacum.
+                                </p>
+                                {% elif predicted_class== 'waterapple' %}
+                               
+                                <p>
+                                    waterapple: Syzygium samarangense is a species of flowering plant in the family Myrtaceae, native to an area that includes the Greater Sunda Islands, Malay Peninsula, and the Andaman and Nicobar Islands, but introduced in prehistoric times to a wider area and now widely cultivated in the tropics. 
+                                </p>
+                                {% elif predicted_class== 'watermelon' %}
+                               
+                                <p>
+                                    watermelon: Watermelon is a flowering plant species of the Cucurbitaceae family and the name of its edible fruit. A scrambling and trailing vine-like plant, it is a highly cultivated fruit worldwide, with more than 1,000 varieties. 
+                                </p>
+                               
+                                {% endif %}
+                            </div>
+                           
+                          
+                        </div>
+                    </div>
+                    <div style="clear: left;"></div>
+                    <!-- <div class="related products product-grid">
+                        <h2 class="product-grid-title">You may also like</h2>
+                        <div class="owl-products owl-slick equal-container nav-center"  data-slick ='{"autoplay":false, "autoplaySpeed":1000, "arrows":true, "dots":false, "infinite":true, "speed":800, "rows":1}' data-responsive='[{"breakpoint":"2000","settings":{"slidesToShow":3}},{"breakpoint":"1200","settings":{"slidesToShow":2}},{"breakpoint":"992","settings":{"slidesToShow":2}},{"breakpoint":"480","settings":{"slidesToShow":1}}]'>
+                            <div class="product-item style-1">
+                                <div class="product-inner equal-element">
+                                    <div class="product-top">
+                                        <div class="flash">
+													<span class="onnew">
+														<span class="text">
+															new
+														</span>
+													</span>
+                                        </div>
+                                    </div>
+                                    <div class="product-thumb">
+                                        <div class="thumb-inner">
+                                            <a href="#">
+                                                <img src="assets/images/product-item-1.jpg" alt="img">
+                                            </a>
+                                            <div class="thumb-group">
+                                                <div class="yith-wcwl-add-to-wishlist">
+                                                    <div class="yith-wcwl-add-button">
+                                                        <a href="#">Add to Wishlist</a>
+                                                    </div>
+                                                </div>
+                                                <a href="#" class="button quick-wiew-button">Quick View</a>
+                                                <div class="loop-form-add-to-cart">
+                                                    <button class="single_add_to_cart_button button">Add to cart
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="product-info">
+                                        <h5 class="product-name product_title">
+                                            <a href="#">Aluminum Plant</a>
+                                        </h5>
+                                        <div class="group-info">
+                                            <div class="stars-rating">
+                                                <div class="star-rating">
+                                                    <span class="star-3"></span>
+                                                </div>
+                                                <div class="count-star">
+                                                    (3)
+                                                </div>
+                                            </div>
+                                            <div class="price">
+                                                <del>
+                                                    $65
+                                                </del>
+                                                <ins>
+                                                    $45
+                                                </ins>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-item style-1">
+                                <div class="product-inner equal-element">
+                                    <div class="product-top">
+                                        <div class="flash">
+													<span class="onnew">
+														<span class="text">
+															new
+														</span>
+													</span>
+                                        </div>
+                                    </div>
+                                    <div class="product-thumb">
+                                        <div class="thumb-inner">
+                                            <a href="#">
+                                                <img src="assets/images/product-item-2.jpg" alt="img">
+                                            </a>
+                                            <div class="thumb-group">
+                                                <div class="yith-wcwl-add-to-wishlist">
+                                                    <div class="yith-wcwl-add-button">
+                                                        <a href="#">Add to Wishlist</a>
+                                                    </div>
+                                                </div>
+                                                <a href="#" class="button quick-wiew-button">Quick View</a>
+                                                <div class="loop-form-add-to-cart">
+                                                    <button class="single_add_to_cart_button button">Add to cart
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="product-info">
+                                        <h5 class="product-name product_title">
+                                            <a href="#">Areca palm</a>
+                                        </h5>
+                                        <div class="group-info">
+                                            <div class="stars-rating">
+                                                <div class="star-rating">
+                                                    <span class="star-3"></span>
+                                                </div>
+                                                <div class="count-star">
+                                                    (3)
+                                                </div>
+                                            </div>
+                                            <div class="price">
+                                                <del>
+                                                    $65
+                                                </del>
+                                                <ins>
+                                                    $45
+                                                </ins>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-item style-1">
+                                <div class="product-inner equal-element">
+                                    <div class="product-top">
+                                        <div class="flash">
+													<span class="onnew">
+														<span class="text">
+															new
+														</span>
+													</span>
+                                        </div>
+                                    </div>
+                                    <div class="product-thumb">
+                                        <div class="thumb-inner">
+                                            <a href="#">
+                                                <img src="assets/images/product-item-3.jpg" alt="img">
+                                            </a>
+                                            <div class="thumb-group">
+                                                <div class="yith-wcwl-add-to-wishlist">
+                                                    <div class="yith-wcwl-add-button">
+                                                        <a href="#">Add to Wishlist</a>
+                                                    </div>
+                                                </div>
+                                                <a href="#" class="button quick-wiew-button">Quick View</a>
+                                                <div class="loop-form-add-to-cart">
+                                                    <button class="single_add_to_cart_button button">Add to cart
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="product-info">
+                                        <h5 class="product-name product_title">
+                                            <a href="#">Arrowhead</a>
+                                        </h5>
+                                        <div class="group-info">
+                                            <div class="stars-rating">
+                                                <div class="star-rating">
+                                                    <span class="star-3"></span>
+                                                </div>
+                                                <div class="count-star">
+                                                    (3)
+                                                </div>
+                                            </div>
+                                            <div class="price">
+                                                <del>
+                                                    $65
+                                                </del>
+                                                <ins>
+                                                    $45
+                                                </ins>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-item style-1">
+                                <div class="product-inner equal-element">
+                                    <div class="product-top">
+                                        <div class="flash">
+													<span class="onnew">
+														<span class="text">
+															new
+														</span>
+													</span>
+                                        </div>
+                                    </div>
+                                    <div class="product-thumb">
+                                        <div class="thumb-inner">
+                                            <a href="#">
+                                                <img src="assets/images/product-item-4.jpg" alt="img">
+                                            </a>
+                                            <div class="thumb-group">
+                                                <div class="yith-wcwl-add-to-wishlist">
+                                                    <div class="yith-wcwl-add-button">
+                                                        <a href="#">Add to Wishlist</a>
+                                                    </div>
+                                                </div>
+                                                <a href="#" class="button quick-wiew-button">Quick View</a>
+                                                <div class="loop-form-add-to-cart">
+                                                    <button class="single_add_to_cart_button button">Add to cart
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="product-info">
+                                        <h5 class="product-name product_title">
+                                            <a href="#">Bird’s Nest Fern</a>
+                                        </h5>
+                                        <div class="group-info">
+                                            <div class="stars-rating">
+                                                <div class="star-rating">
+                                                    <span class="star-3"></span>
+                                                </div>
+                                                <div class="count-star">
+                                                    (3)
+                                                </div>
+                                            </div>
+                                            <div class="price">
+                                                <del>
+                                                    $65
+                                                </del>
+                                                <ins>
+                                                    $45
+                                                </ins>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer class="footer style7">
+    <div class="container">
+        <div class="container-wapper">
+            <!--<div class="row">
+                <div class="box-footer col-xs-12 col-sm-4 col-md-4 col-lg-4 hidden-sm hidden-md hidden-lg">
+                    <div class="teamo-newsletter style1">
+                        <div class="newsletter-head">
+                            <h3 class="title">Newsletter</h3>
+                        </div>
+                        <div class="newsletter-form-wrap">
+                            <div class="list">
+                                Sign up for our free video course and <br/> urban garden inspiration
+                            </div>
+                            <input type="email" class="input-text email email-newsletter"
+                                   placeholder="Your email letter">
+                            <button class="button btn-submit submit-newsletter">SUBSCRIBE</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="box-footer col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                    <div class="teamo-custommenu default">
+                        <h2 class="widgettitle">Quick Menu</h2>
+                        <ul class="menu">
+                            <li class="menu-item">
+                                <a href="#">New arrivals</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="#">Life style</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="#">Cacti</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="#">Palms</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="#">Ferns</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="box-footer col-xs-12 col-sm-4 col-md-4 col-lg-4 hidden-xs">
+                    <div class="teamo-newsletter style1">
+                        <div class="newsletter-head">
+                            <h3 class="title">Newsletter</h3>
+                        </div>
+                        <div class="newsletter-form-wrap">
+                            <div class="list">
+                                Sign up for our free video course and <br/> urban garden inspiration
+                            </div>
+                            <input type="email" class="input-text email email-newsletter"
+                                   placeholder="Your email letter">
+                            <button class="button btn-submit submit-newsletter">SUBSCRIBE</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="box-footer col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                    <div class="teamo-custommenu default">
+                        <h2 class="widgettitle">Information</h2>
+                        <ul class="menu">
+                            <li class="menu-item">
+                                <a href="#">FAQs</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="#">Track Order</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="#">Delivery</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="#">Contact Us</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="#">Return</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>-->
+            <div class="footer-end">
+                <div class="row">
+                    <div class="col-sm-12 col-xs-12">
+                       <!--<div class="teamo-socials">
+                            <ul class="socials">
+                                <li>
+                                    <a href="#" class="social-item" target="_blank">
+                                        <i class="icon fa fa-facebook"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="social-item" target="_blank">
+                                        <i class="icon fa fa-twitter"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="social-item" target="_blank">
+                                        <i class="icon fa fa-instagram"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>-->
+                        <div class="coppyright">
+                            Copyright © 2024
+                            <a href="#">Plant species Detection</a>
+                            . All rights reserved
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<div class="footer-device-mobile">
+    <div class="wapper">
+        <div class="footer-device-mobile-item device-home">
+            <a href="index-2.html">
+					<span class="icon">
+						<i class="fa fa-home" aria-hidden="true"></i>
+					</span>
+                Home
+            </a>
+        </div>
+        <div class="footer-device-mobile-item device-home device-wishlist">
+            <a href="#">
+					<span class="icon">
+						<i class="fa fa-heart" aria-hidden="true"></i>
+					</span>
+                Wishlist
+            </a>
+        </div>
+        <div class="footer-device-mobile-item device-home device-cart">
+            <a href="#">
+					<span class="icon">
+						<i class="fa fa-shopping-basket" aria-hidden="true"></i>
+						<span class="count-icon">
+							0
+						</span>
+					</span>
+                <span class="text">Cart</span>
+            </a>
+        </div>
+        <div class="footer-device-mobile-item device-home device-user">
+            <a href="#">
+					<span class="icon">
+						<i class="fa fa-user" aria-hidden="true"></i>
+					</span>
+                Account
+            </a>
+        </div>
+    </div>
+</div>
+<a href="#" class="backtotop">
+    <i class="fa fa-angle-double-up"></i>
+</a>
+<script src="assets/js/jquery-1.12.4.min.js"></script>
+<script src="assets/js/jquery.plugin-countdown.min.js"></script>
+<script src="assets/js/jquery-countdown.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/owl.carousel.min.js"></script>
+<script src="assets/js/magnific-popup.min.js"></script>
+<script src="assets/js/isotope.min.js"></script>
+<script src="assets/js/jquery.scrollbar.min.js"></script>
+<script src="assets/js/jquery-ui.min.js"></script>
+<script src="assets/js/mobile-menu.js"></script>
+<script src="assets/js/chosen.min.js"></script>
+<script src="assets/js/slick.js"></script>
+<script src="assets/js/jquery.elevateZoom.min.js"></script>
+<script src="assets/js/jquery.actual.min.js"></script>
+<script src="assets/js/fancybox/source/jquery.fancybox.js"></script>
+<script src="assets/js/lightbox.min.js"></script>
+<script src="assets/js/owl.thumbs.min.js"></script>
+<script src="assets/js/jquery.scrollbar.min.js"></script>
+<script src='https://maps.googleapis.com/maps/api/js?key=AIzaSyC3nDHy1dARR-Pa_2jjPCjvsOR4bcILYsM'></script>
+<script src="assets/js/frontend-plugin.js"></script>
+</body>
+
+<!-- Mirrored from ledthanhdat.vn/html/teamo/productdetails-fullwidth.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 08 Jul 2023 07:27:19 GMT -->
+</html>
